@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Magnetic } from "../reactbits";
 
 const links = [
@@ -10,14 +10,6 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const jump = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -25,14 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={[
-        "fixed left-0 top-0 z-[150] w-full",
-        scrolled
-          ? "border-b border-white/10 bg-black/40 backdrop-blur"
-          : "border-b border-transparent bg-transparent",
-      ].join(" ")}
-    >
+    <header className="fixed left-0 top-0 z-[150] w-full border-b border-white/10 bg-black/30 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <button
           onClick={() => jump("hero")}
