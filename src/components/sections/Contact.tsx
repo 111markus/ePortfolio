@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { ClickSpark, FadeContent, ShinyText, StarBorder } from "../reactbits";
-
+import me2 from "../../assets/me2.jpg";
+import ElectricBorder from "../ElectricBorder";
 export default function Contact() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText("markus.laanes@voco.ee");
+    setEmailCopied(true);
+    window.setTimeout(() => setEmailCopied(false), 1500);
+  };
+
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
       <FadeContent>
@@ -22,17 +32,18 @@ export default function Contact() {
             </p>
 
             <div className="mt-8 space-y-3 text-sm">
-              <div className="rounded-2xl border border-white/25 bg-black/[0.5] p-4">
+              <button
+                type="button"
+                onClick={copyEmail}
+                className="block w-full rounded-2xl border border-white/25 bg-black/[0.5] p-4 text-left transition hover:border-[color:var(--accent)] hover:bg-black/[0.65]"
+              >
                 <div className="text-xs text-white/80">Email</div>
                 <div className="mt-1 text-white">
-                  <a
-                    className="hover:underline"
-                    href="mailto:markus.laanes@voco.ee"
-                  >
-                    <ShinyText>markus.laanes@voco.ee</ShinyText>
-                  </a>
+                  <ShinyText>
+                    {emailCopied ? "Copied" : "markus.laanes@voco.ee"}
+                  </ShinyText>
                 </div>
-              </div>
+              </button>
               <div className="rounded-2xl border border-white/25 bg-black/[0.5] p-4">
                 <div className="text-xs text-white/80">GitHub</div>
                 <a
@@ -47,60 +58,23 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/25 bg-black/[0.5] p-6 backdrop-blur">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const f = e.currentTarget;
-                const btn = f.querySelector(
-                  'button[type="submit"]',
-                ) as HTMLButtonElement | null;
-                if (btn) btn.textContent = "Saadetud ✓";
-                setTimeout(() => {
-                  f.reset();
-                  if (btn) btn.textContent = "Saada →";
-                }, 2200);
-              }}
-              className="space-y-4"
+          <div className="mx-auto w-full max-w-[320px] -mt-[25px] md:mx-0 md:ml-20 md:max-w-[440px]">
+            <ElectricBorder
+              color="#6983ad"
+              speed={0.2}
+              chaos={0.04}
+              thickness={2}
+              borderRadius={16}
+              style={{ borderRadius: 16 }}
             >
-              <div>
-                <label className="block text-xs text-white/80">Name</label>
-                <input
-                  required
-                  className="mt-2 w-full rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <label className="block text-xs text-white/80">Email</label>
-                <input
-                  type="email"
-                  required
-                  className="mt-2 w-full rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-xs text-white/80">Message</label>
-                <textarea
-                  required
-                  rows={5}
-                  className="mt-2 w-full resize-none rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
-                  placeholder="Describe briefly..."
-                />
-              </div>
-
-              <ClickSpark>
-                <StarBorder>
-                  <button
-                    type="submit"
-                    className="w-full px-3 py-2 text-sm font-semibold text-white"
-                  >
-                    Send →
-                  </button>
-                </StarBorder>
-              </ClickSpark>
-            </form>
+              <img
+                src={me2}
+                alt="Markus"
+                className="h-auto w-full select-none rounded-2xl"
+                loading="eager"
+                draggable={false}
+              />
+            </ElectricBorder>
           </div>
         </div>
       </FadeContent>

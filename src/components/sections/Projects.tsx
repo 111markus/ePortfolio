@@ -4,14 +4,12 @@ import {
   ShinyText,
   SpotLight,
   TiltCard,
-  Ribbons,
 } from "../reactbits";
 import { projects } from "../../data/projects";
 
 export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden">
-      <Ribbons />
       <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeContent>
           <div className="mb-10 flex items-baseline justify-between gap-4">
