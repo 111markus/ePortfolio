@@ -1,11 +1,10 @@
-# ePortfolio
+# my-portfolio
 
-See repo sisaldab Vite + React portfolioäppi kaustas `my-portfolio/`.
+Vite + React portfolio.
 
-## Arendus
+## Run locally
 
 ```bash
-cd my-portfolio
 npm install
 npm run dev
 ```
@@ -13,14 +12,12 @@ npm run dev
 ## Build
 
 ```bash
-cd my-portfolio
 npm run build
 npm run preview
 ```
 
-## Miks on `archive/` kaust?
+## Repo structure
 
-`archive/` sisaldab varasemaid/eksperimentaalseid faile, mida Vite äpp ei kasuta.
-See repo hetkel arhiveerib sinna peamiselt vanu/alternatiivseid entrypointe ja prototüübi-faile.
-
-Appi kood, mida Vite käivitab, on `my-portfolio/src/*`.
+- App source: `src/`
+- Static assets: `public/`
+- Older/unused experiments can be kept at repo root in `archive/`.
