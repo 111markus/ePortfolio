@@ -25,7 +25,7 @@ export default function About() {
 
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <div>
-            <div className="mt-10 space-y-4 leading-relaxed text-white/95 sm:text-base">
+            <div className="mt-10 space-y-4 rounded-2xl border border-white/25 bg-black/[0.5] p-4 leading-relaxed text-white/95 sm:text-base">
               <p>
                 I'm Markus, a 21-year-old Software Development student at Tartu
                 Vocational College. Technology has always been part of my life —
@@ -52,7 +52,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[320px] -mt-[40px] md:mx-0 md:ml-20 md:max-w-[420px]">
+          <div className="mx-auto w-full max-w-[320px] -mt-[25px] md:mx-0 md:ml-20 md:max-w-[440px]">
             <ElectricBorder
               color="#6983ad"
               speed={0.2}
