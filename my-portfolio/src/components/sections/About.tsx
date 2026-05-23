@@ -10,7 +10,7 @@ import ElectricBorder from "../ElectricBorder";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-0 py-24  ">
+    <section id="about" className="mx-auto max-w-6xl px-6 py-24 md:px-0  ">
       <FadeContent>
         <div className="mb-10 flex items-baseline justify-between gap-4 -mt-[80px]">
           <p className="font-mono  tracking-[0.22em] text-[color:var(--accent)] ">
