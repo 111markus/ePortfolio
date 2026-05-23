@@ -10,7 +10,7 @@ import {
 
 export default function App() {
   return (
-    <>
+    <div className="relative isolate">
       <div
         style={{
           position: "fixed",
@@ -34,7 +34,12 @@ export default function App() {
         />
       </div>
 
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-10 bg-black/40"
+      />
+
+      <div style={{ position: "relative", zIndex: 20 }}>
         <PageLoadCurtain />
         <ScrollProgress />
         <Navbar />
@@ -43,6 +48,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   );
 }

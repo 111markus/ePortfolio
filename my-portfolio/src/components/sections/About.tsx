@@ -10,23 +10,24 @@ import ElectricBorder from "../ElectricBorder";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="about" className="mx-auto max-w-6xl px-0 py-24  ">
       <FadeContent>
-        <div className="mb-10 flex items-baseline justify-between gap-4">
-          <p className="font-mono  tracking-[0.22em] text-[color:var(--accent)]">
+        <div className="mb-10 flex items-baseline justify-between gap-4 -mt-[80px]">
+          <p className="font-mono  tracking-[0.22em] text-[color:var(--accent)] ">
             ABOUT ME
           </p>
+
           <div className="h-px flex-1 bg-white/10" />
         </div>
+        <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+          Let me introduce myself
+        </h2>
 
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <div>
-            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-              Let me introduce myself{" "}
-            </h2>
-            <div className="mt-5 space-y-4 text-sm leading-relaxed text-white/70 sm:text-base">
+            <div className="mt-10 space-y-4 leading-relaxed text-white/95 sm:text-base">
               <p>
-                I'm Markus, a 20-year-old Software Development student at Tartu
+                I'm Markus, a 21-year-old Software Development student at Tartu
                 Vocational College. Technology has always been part of my life —
                 from building and configuring computers as a kid to now focusing
                 on front-end development.
@@ -51,7 +52,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[320px] md:mx-0 md:ml-20 md:max-w-[420px]">
+          <div className="mx-auto w-full max-w-[320px] -mt-[40px] md:mx-0 md:ml-20 md:max-w-[420px]">
             <ElectricBorder
               color="#6983ad"
               speed={0.2}
@@ -74,7 +75,7 @@ export default function About() {
             <div className="font-mono tracking-[0.22em] text-[color:var(--accent)]">
               EDUCATION
             </div>
-            <div className="grid gap-3 md:grid-cols-2 mt-4">
+            <div className="grid gap-5 md:grid-cols-2 mt-4">
               {education.map((e) => (
                 <div
                   key={`${e.from}-${e.to}-${e.school}`}
@@ -92,7 +93,7 @@ export default function About() {
                     {e.school} · {e.location}
                     {e.graduation ? ` · Graduation ${e.graduation}` : ""}
                   </div>
-                  <div className="mt-3 flex flex-wrap gap-2 text-[12px] text-white/95">
+                  <div className="mt-3 flex flex-wrap gap-3 text-[12px] text-white/95">
                     {e.highlights.map((h) => (
                       <span
                         key={h}
@@ -111,13 +112,13 @@ export default function About() {
             <div className="font-mono tracking-[0.22em] text-[color:var(--accent)]">
               EXPERIENCE
             </div>
-            <div className="grid gap-3 md:grid-cols-2 mt-4">
+            <div className="grid gap-5 md:grid-cols-2 mt-4">
               {experience.map((x) => (
                 <div
                   key={`${x.from}-${x.to}-${x.company}`}
-                  className="rounded-2xl border border-white/10 bg-black/[0.5] p-4"
+                  className="rounded-2xl border border-white/25 bg-black/[0.5] p-4"
                 >
-                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div className="text-sm font-semibold text-white">
                       {x.title}
                     </div>

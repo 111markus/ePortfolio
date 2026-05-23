@@ -10,7 +10,7 @@ export default function InfiniteScroll({ items, className }: Props) {
         {[...items, ...items].map((t, i) => (
           <span
             key={`${t}-${i}`}
-            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80"
+            className="rounded-full border border-white/25 bg-black/50 px-3 py-1 text-md text-white/80"
           >
             {t}
           </span>

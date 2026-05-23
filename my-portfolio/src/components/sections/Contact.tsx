@@ -5,8 +5,8 @@ export default function Contact() {
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
       <FadeContent>
         <div className="mb-10 flex items-baseline justify-between gap-4">
-          <p className="font-mono text-xs tracking-[0.22em] text-[color:var(--accent)]">
-            KONTAKT
+          <p className="font-mono  tracking-[0.22em] text-[color:var(--accent)]">
+            CONTACT
           </p>
           <div className="h-px flex-1 bg-white/10" />
         </div>
@@ -14,16 +14,16 @@ export default function Contact() {
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-              Võta ühendust
+              Get in Touch
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
-              Kui sul on projekt, praktika- või tööpakkumine, kirjuta mulle.
-              Vastan esimesel võimalusel.
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/95 sm:text-base">
+              If you have a project, internship, or job opportunity, feel free
+              to write to me. I will get back to you as soon as possible.
             </p>
 
             <div className="mt-8 space-y-3 text-sm">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="text-xs text-white/60">Email</div>
+              <div className="rounded-2xl border border-white/25 bg-black/[0.5] p-4">
+                <div className="text-xs text-white/80">Email</div>
                 <div className="mt-1 text-white">
                   <a
                     className="hover:underline"
@@ -33,21 +33,21 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="text-xs text-white/60">GitHub</div>
+              <div className="rounded-2xl border border-white/25 bg-black/[0.5] p-4">
+                <div className="text-xs text-white/80">GitHub</div>
                 <a
-                  className="mt-1 inline-block text-white/85 hover:underline"
+                  className="mt-1 inline-block text-white/95 hover:underline"
                   href="https://github.com/111markus"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  github.com/111markus
+                  <ShinyText>github.com/111markus</ShinyText>
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+          <div className="rounded-3xl border border-white/25 bg-black/[0.5] p-6 backdrop-blur">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -64,29 +64,29 @@ export default function Contact() {
               className="space-y-4"
             >
               <div>
-                <label className="block text-xs text-white/60">Nimi</label>
+                <label className="block text-xs text-white/80">Name</label>
                 <input
                   required
-                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[color:var(--accent)]"
-                  placeholder="Sinu nimi"
+                  className="mt-2 w-full rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
-                <label className="block text-xs text-white/60">Email</label>
+                <label className="block text-xs text-white/80">Email</label>
                 <input
                   type="email"
                   required
-                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[color:var(--accent)]"
-                  placeholder="sina@email.ee"
+                  className="mt-2 w-full rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
+                  placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label className="block text-xs text-white/60">Sõnum</label>
+                <label className="block text-xs text-white/80">Message</label>
                 <textarea
                   required
                   rows={5}
-                  className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[color:var(--accent)]"
-                  placeholder="Kirjelda lühidalt..."
+                  className="mt-2 w-full resize-none rounded-2xl border border-white/25 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-white/55 focus:border-[color:var(--accent)]"
+                  placeholder="Describe briefly..."
                 />
               </div>
 
@@ -96,7 +96,7 @@ export default function Contact() {
                     type="submit"
                     className="w-full px-3 py-2 text-sm font-semibold text-white"
                   >
-                    Saada →
+                    Send →
                   </button>
                 </StarBorder>
               </ClickSpark>

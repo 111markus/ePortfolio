@@ -33,10 +33,19 @@ export const languages = [
 ] as const;
 
 export const skills = {
-  frontend: ["HTML", "CSS", "JavaScript", "React"],
-  tools: ["WordPress", "Docker", "Figma", "Git/GitHub"],
-  databases: ["MariaDB", "MySQL"],
-  other: ["JSON", "Render"],
+  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "WordPress"],
+  tools: [
+    "WordPress",
+    "Docker",
+    "Git/GitHub",
+    "Figma",
+    "MariaDB",
+    "MySQL",
+    "FireBase",
+    "MongoDB",
+  ],
+  databases: [],
+  other: ["Node.js", "PHP", "Express", "Python"],
 } as const;
 
 export const education: Education[] = [
@@ -54,13 +63,16 @@ export const education: Education[] = [
       "WordPress",
       "Docker",
       "MariaDB/MySQL",
+      "Figma",
+      "Git/GitHub",
+      "FireBase",
     ],
     graduation: "2028",
   },
   {
     from: "2021",
     to: "2024",
-    title: "Keskharidus",
+    title: "Secondary Education",
     school: "Jõgevamaa Gümnaasium",
     location: "Jõgeva, Estonia",
     highlights: [

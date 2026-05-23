@@ -10,26 +10,30 @@ const marquee = [
   "MariaDB/MySQL",
   "Figma",
   "Git/GitHub",
-  "Render",
+  "FireBase",
+  "MongoDB",
+  "JSON",
+  "Tailwind CSS",
+  "Photoshop",
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative mx-auto max-w-6xl px-6 py-24">
+    <section id="skills" className="relative mx-auto max-w-6xl px-6 py-24 ">
       <FadeContent>
         <div className="mb-10 flex items-baseline justify-between gap-4">
-          <p className="font-mono text-xs tracking-[0.22em] text-[color:var(--accent)]">
-            OSKUSED
+          <p className="font-mono  tracking-[0.22em] text-[color:var(--accent)]">
+            SKILLS
           </p>
           <div className="h-px flex-1 bg-white/10" />
         </div>
 
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Mida ma kasutan
+          What do I use?
         </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">
-          Siin on kiire ülevaade tehnoloogiatest ja tööriistadest, millega ma
-          kõige rohkem kokku puutun.
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/95 sm:text-base">
+          Here is a quick overview of the technologies and tools I work with
+          most often.
         </p>
 
         <div className="mt-10">
@@ -39,18 +43,18 @@ export default function Skills() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <GlassIcons
             title="Frontend"
-            items={skills.frontend.map((s) => ({ label: s, icon: "⚡" }))}
+            items={skills.frontend.map((s) => ({ label: s, icon: "" }))}
           />
           <GlassIcons
-            title="Tools"
-            items={skills.tools.map((s) => ({ label: s, icon: "🧰" }))}
-          />
-          <GlassIcons
-            title="Databases & Other"
+            title="Backend"
             items={[...skills.databases, ...skills.other].map((s) => ({
               label: s,
-              icon: "🗄",
+              icon: "",
             }))}
+          />
+          <GlassIcons
+            title="Tools & Databases"
+            items={skills.tools.map((s) => ({ label: s, icon: "" }))}
           />
         </div>
       </FadeContent>
