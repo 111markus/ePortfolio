@@ -1,4 +1,4 @@
-name: Deploy to Zone
+name: Deploy to Zone.ee (FTP)
 
 on:
   push:
@@ -8,29 +8,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - name: Move files, Install & Build
-        run: |
-          # 1. Liigume esimesse kausta, kus asub sinu package.json
-          cd ePortfolio
-          
-          # 2. Liigutame package failid my-portfolio kausta, et kood ja seaded oleks koos
-          mv package.json ../my-portfolio/ 2>/dev/null || true
-          mv package-lock.json ../my-portfolio/ 2>/dev/null || true
-          
-          # 3. Liigume kausta, kus on nüüd kogu su projekt koos
-          cd ../my-portfolio
-          
-          # 4. Paigaldame ja ehitame
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -38,9 +31,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Kuna lõplik projekt ehitati 'my-portfolio' kaustas, asub 'dist' seal
-          local-dir: ./my-portfolio/dist/
-          # Zone korrektne peakaust
-          server-dir: /htdocs/
-          # Puhastab Zone vaikefailid
-          dangerous-clean-html: true
+          local-dir: ./dist/
+          server-dir: htdocs/
