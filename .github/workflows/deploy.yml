@@ -18,7 +18,6 @@ jobs:
 
       - name: Install & Build
         run: |
-          cd my-portfolio
           npm install
           npm run build
 
@@ -28,5 +27,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./my-portfolio/dist/
-          server-dir: /public_html/
+          # Kuna kood on juurkaustas, tekib 'dist' kaust otse siia
+          local-dir: ./dist/
+          # Zone peadomeeni korrektne kaust on htdocs
+          server-dir: /htdocs/
+          # Kustutab Zone vaikimisi placeholderi ja vanad failid
+          dangerous-clean-html: true
