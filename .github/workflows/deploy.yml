@@ -16,8 +16,19 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install & Build
+      - name: Move files, Install & Build
         run: |
+          # 1. Liigume esimesse kausta, kus asub sinu package.json
+          cd ePortfolio
+          
+          # 2. Liigutame package failid my-portfolio kausta, et kood ja seaded oleks koos
+          mv package.json ../my-portfolio/ 2>/dev/null || true
+          mv package-lock.json ../my-portfolio/ 2>/dev/null || true
+          
+          # 3. Liigume kausta, kus on nüüd kogu su projekt koos
+          cd ../my-portfolio
+          
+          # 4. Paigaldame ja ehitame
           npm install
           npm run build
 
@@ -27,9 +38,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Kuna kood on juurkaustas, tekib 'dist' kaust otse siia
-          local-dir: ./dist/
-          # Zone peadomeeni korrektne kaust on htdocs
+          # Kuna lõplik projekt ehitati 'my-portfolio' kaustas, asub 'dist' seal
+          local-dir: ./my-portfolio/dist/
+          # Zone korrektne peakaust
           server-dir: /htdocs/
-          # Kustutab Zone vaikimisi placeholderi ja vanad failid
+          # Puhastab Zone vaikefailid
           dangerous-clean-html: true
