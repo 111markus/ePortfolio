@@ -29,7 +29,7 @@ export default function Skills() {
         </div>
 
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          What do I use?
+          Tech Stack
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/95 sm:text-base">
           Here is a quick overview of the technologies and tools I work with

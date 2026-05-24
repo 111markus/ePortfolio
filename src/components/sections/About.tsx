@@ -20,7 +20,7 @@ export default function About() {
           <div className="h-px flex-1 bg-white/10" />
         </div>
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Let me introduce myself
+          My Background
         </h2>
 
         <div className="grid gap-12 md:grid-cols-2 md:items-start">

@@ -20,11 +20,11 @@ export default function Projects() {
           </div>
 
           <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-            Selected Works
+            Code in Action
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/95 sm:text-base">
             A collection of projects I have developed. Click on a visual to view
-            the live demo or explore the code on GitHub.
+            the live site or explore the code on GitHub.
           </p>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
