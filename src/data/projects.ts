@@ -38,7 +38,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Ajututvus",
     description:
-      "Hackathon project — multiplayer party icebreaker game with room codes and a host control panel",
+      "Hackathon project - multiplayer party icebreaker game with room codes and a host control panel",
     tech: ["JavaScript", "FireBase", "HTML", "CSS"],
     github: "https://github.com/111markus/Ajututvus",
     live: "https://vso25laanes.ita.voco.ee/veebiarendus/ajututvus/",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     id: 4,
     title: "CS2 Hobby Page",
     description:
-      "One of my first projects — a personal CS2 statistics hobby page with match history, K/D stats, and gameplay highlight videos",
+      "One of my first projects - a personal CS2 statistics hobby page with match history, K/D stats, and gameplay highlight videos",
     tech: ["HTML", "CSS"],
     github: "https://github.com/111markus/hobileht",
     live: "https://vso25laanes.ita.voco.ee/veebiarendus/hobileht/",

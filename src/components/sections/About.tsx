@@ -28,7 +28,7 @@ export default function About() {
             <div className="mt-10 space-y-4 rounded-2xl border border-white/25 bg-black/[0.5] p-4 leading-relaxed text-white/95 sm:text-base">
               <p>
                 I'm Markus, a 21-year-old Software Development student at Tartu
-                Vocational College. Technology has always been part of my life —
+                Vocational College. Technology has always been part of my life -
                 from building and configuring computers as a kid to now focusing
                 on front-end development.
               </p>
@@ -39,7 +39,7 @@ export default function About() {
                 client project for a makeup artist.
               </p>
               <p>
-                Outside of coding I stay active — gym, mountain skiing, and
+                Outside of coding I stay active - gym, mountain skiing, and
                 keeping a healthy balance.
               </p>
               <p>
