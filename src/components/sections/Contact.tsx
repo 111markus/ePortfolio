@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-              Get in Touch
+              Let’s Connect
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/95 sm:text-base">
               If you have a project, internship, or job opportunity, feel free

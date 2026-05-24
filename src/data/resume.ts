@@ -33,7 +33,7 @@ export const languages = [
 ] as const;
 
 export const skills = {
-  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "WordPress"],
+  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
   tools: [
     "WordPress",
     "Docker",

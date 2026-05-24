@@ -53,7 +53,7 @@ export default function Skills() {
             }))}
           />
           <GlassIcons
-            title="Tools & Databases"
+            title="Tools & other"
             items={skills.tools.map((s) => ({ label: s, icon: "" }))}
           />
         </div>
